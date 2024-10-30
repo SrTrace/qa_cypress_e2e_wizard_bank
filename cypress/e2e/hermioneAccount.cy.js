@@ -78,10 +78,8 @@ describe('Bank app', () => {
     cy.get('[ng-click="transactions()"]').click();
 
     cy.get('#anchor0')
-      .should('contain.text', 'Debit')
       .should('not.exist');
     cy.get('#anchor1')
-      .should('contain.text', 'Credit')
       .should('not.exist');
 
     cy.contains('tr', 'Credit').should('not.exist');
